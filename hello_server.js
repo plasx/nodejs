@@ -14,7 +14,8 @@ var app = express();
 app.get('/json/', function(request, response) {
     response.json({
         name: 'Daniel Rivera',
-        food: 'Pizza'
+        food: 'Pizza',
+        videogame: 'mvc1'
     });
 });
 app.get('/headers/', function(request, response) {
@@ -25,7 +26,7 @@ app.get('/headers/:header_name', function(request, response) {
     response.send(headerName);
 });
 app.get('/version', function(request, response) {
-     response.json(request.headers.http);
+     response.json(request.httpVersion);
 });
 
 
